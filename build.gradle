@@ -44,3 +44,10 @@ jar {
         attributes 'Main-Class': 'gipf.Main'
     }
 }
+
+sonar {
+  properties {
+    property "sonar.projectKey", "SonarTest"
+    property "sonar.projectName", "SonarTest"
+  }
+}
