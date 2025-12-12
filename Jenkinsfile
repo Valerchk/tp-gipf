@@ -4,7 +4,7 @@ node {
   }
   stage('SonarQube Analysis') {
     withSonarQubeEnv() {
-      sh "./gradlew sonar"
+      sh "./gradlew sonar -D https.proxyHost=proxy1-rech -D https.proxyPort=3128"
     }
   }
 }
