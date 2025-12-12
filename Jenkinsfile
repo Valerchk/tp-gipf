@@ -4,8 +4,9 @@ node {
   }
   stage('SonarQube Analysis') {
     withSonarQubeEnv('SonarScanner') {
-      sh "./gradlew -Dhttp.proxyHost=proxy1-rech -Dhttp.proxyPort=3128"
       sh "./gradlew sonar \
+  -Dhttp.proxyHost=proxy1-rech \
+  -Dhttp.proxyPort=3128 \
   -Dsonar.projectKey=SonarTest \
   -Dsonar.projectName='SonarTest' \
   -Dsonar.host.url=http://localhost:9000 \
