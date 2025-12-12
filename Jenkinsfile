@@ -13,8 +13,8 @@ node {
         ./gradlew sonarqube \
           -Dsonar.projectKey=SonarTest \
           -Dsonar.projectName='SonarTest' \
-          -Dsonar.host.url=${env.SONAR_HOST_URL} \
-          -Dsonar.login=${env.SONAR_AUTH_TOKEN}
+          -Dsonar.host.url='http://localhost:9000' \
+          -Dsonar.login='c9e130d4d6f3dc12066eb0aa990a1766d491674b'
       """
     }
   }
